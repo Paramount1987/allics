@@ -1,34 +1,29 @@
+/* eslint-disable import/first */
+/* eslint-disable no-new */
+/* eslint-disable indent */
 import '../styles/index.scss';
+
 // libs
 //-------------------------------------------------------
 window.$ = require('jquery');
+require('./libs/index');
 
 window.jQuery = window.$;
 
-require('./libs/index');
-
-// utils
-//----------------------------------------------
-require('./utils/index');
+import SliderWorks from './components/slider-works';
 
 //----------------------------------------------
 $(document).ready(() => {
-  /* global Swiper */
-  const swiper = new Swiper('.swiper-container', {
-    loop: true,
-  });
+  new SliderWorks('.js-swiper-works');
 
-  $('.js-example-basic-single').select2();
-
-  $('.popup-modal').magnificPopup({
+  $('.js-popup-form').magnificPopup({
     type: 'inline',
     preloader: false,
-    focus: '#username',
-    modal: true,
+    focus: '#name',
   });
 
-  $(document).on('click', '.popup-modal-dismiss', (e) => {
-    e.preventDefault();
-    $.magnificPopup.close();
-  });
+  // $(document).on('click', '.popup-modal-dismiss', (e) => {
+  //   e.preventDefault();
+  //   $.magnificPopup.close();
+  // });
 });

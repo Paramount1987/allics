@@ -1,0 +1,33 @@
+.nav {
+  display: none;
+
+  &_list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 50px 0;
+    padding: 0;
+    width: 100%;
+    list-style-type: none;
+  }
+
+  &_link {
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: #121212;
+    text-decoration: none;
+
+    &:hover {
+      color: #3a56db;
+    }
+
+    &.active {
+      border-bottom: 4px solid #3a56db;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+}

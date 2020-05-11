@@ -1,0 +1,45 @@
+.swiper-works {
+  margin-bottom: 20px;
+
+  .swiper-slide {
+    margin-top: 0 !important;
+    margin-bottom: 30px !important;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 20px;
+    height: 35px;
+    background-size: 20px 35px;
+    margin-top: -17px;
+  }
+
+  @include media-breakpoint-down(md) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: 25px;
+      right: 0;
+      bottom: auto;
+    }
+
+    .swiper-button-prev {
+      left: auto;
+      right: 120px;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .swiper-button-prev {
+      left: 1px;
+    }
+    .swiper-button-next {
+      right: 1px;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .swiper-container {
+    margin: 0 -21px;
+    padding: 0 21px;
+  }
+}

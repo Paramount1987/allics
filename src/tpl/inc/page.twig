@@ -10,7 +10,17 @@
 </head>
 <body>
 
-{% set title = "Twig.js templating test" %}
+  <div class="bg-section">
+    <div class="bg-photo" style="background-image: url(images/city.jpg)"></div>
+    <video loop muted autoplay class="bg-video">
+    <source src="images/Caramoan_Drone.mp4" type="video/mp4">
+    </video>
+  </div>
+
+{% set title = "ALLICS" %}
+
+{% include 'header.twig' %}
+{% include 'components/nav.twig' %}
 
 {% block content %}{% endblock %}
 

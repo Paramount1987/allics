@@ -1,69 +1,68 @@
-// stylelint-disable selector-no-qualifying-type
+.form {
 
-//
-// Textual form controls
-//
-
-.form-control {
-  display: block;
-  width: 100%;
-  padding: 5px;
-  font-size: $font-size-base;
-  line-height: 1;
-  color: $black;
-  background-color: transparent;
-  background-clip: padding-box;
-  border: 1px solid $black;
-
-  // Unstyle the caret on `<select>`s in IE10+.
-  &::-ms-expand {
-    background-color: transparent;
-    border: 0;
+  &_title {
+    font-weight: 900;
+    text-align: center;
   }
 
+  &__popup {
+    position: relative;
+    max-width: 770px;
+    margin: 0 auto;
+    padding: 60px 30px 40px 30px;
+    background-color: $white;
+    border-radius: 3px;
 
-  // Placeholder
-  &::placeholder {
-
-    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
-    opacity: 1;
+    .mfp-close {
+      color: #141414;
+      font-size: 32px;
+    }
   }
 
-  // Disabled and read-only inputs
-  //
-  // HTML5 says that controls under a fieldset > legend:first-child won't be
-  // disabled if the fieldset is disabled. Due to implementation difficulty, we
-  // don't honor that edge case; we style them as disabled anyway.
-  &:disabled,
-  &[readonly] {
-    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
-    opacity: 1;
+  &-row {
+    max-width: 470px;
+    margin: 0 auto;
+  }
+
+  &-group {
+    margin-bottom: 20px;
+    label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4px;
+      font-size: 16px;
+      color: #222;
+    }
+  }
+
+  &-control {
+    width: 100%;
+    height: 43px;
+    padding: 0 15px;
+    background-color: #f6f6f6;
+    border: solid 1px #c8c8c8;
+    border-radius: 3px;
+
+    &.error {
+      border-color: #ff4444;
+    }
+  }
+
+  &_descr {
+    color: #8e8e8e;
+    font-size: 14px;
+  }
+
+  .btn {
+    width: 188px;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
   }
 }
 
-// Form groups
-//
-// Designed to help with the organization and spacing of vertical forms. For
-// horizontal forms, use the predefined grid classes.
-
-.form-group {
-  margin-bottom: 10px;
-}
-
-
-// Form grid
-//
-// Special replacement for our grid system's `.row` for tighter form layouts.
-
-.form-row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -5px;
-  margin-left: -5px;
-
-  > .col,
-  > [class*="col-"] {
-    padding-right: 5px;
-    padding-left: 5px;
-  }
+.label_error {
+  color: #ff4444;
+  font-size: 14px;
 }

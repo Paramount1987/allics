@@ -1,0 +1,53 @@
+.main-about {
+  display: flex;
+  margin-bottom: 30px;
+  background-color: rgba($white, .8);
+  border: 3px solid #999;
+  border-radius: 5px;
+
+  &_col {
+    &__left {
+      display: none;
+    }
+    &__right {
+      padding: 20px;
+    }
+  }
+
+  &_title {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  &_descr {
+    margin-bottom: 10px;
+    font-size: 16px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .btn {
+    width: 187px;
+    font-size: 14px;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 100px;
+
+    &_col {
+      &__left {
+        width: 45%;
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      &__right {
+        width: 55%;
+        padding: 30px 50px;
+      }
+    }
+  }
+}

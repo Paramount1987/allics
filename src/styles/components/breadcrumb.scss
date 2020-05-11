@@ -2,16 +2,20 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  margin-bottom: 30px;
 }
 
 .breadcrumb-item {
-  // The separator between breadcrumbs (by default, a forward-slash: "/")
+  color: #181818;
+  font-size: 16px;
+
   + .breadcrumb-item {
     padding-left: 10px;
 
     &::before {
       display: inline-block; // Suppress underlining of the separator in modern browsers
-      content: '/';
+      content: '>';
+      margin-right: 10px;
     }
   }
 
@@ -27,9 +31,5 @@
   // stylelint-disable-next-line no-duplicate-selectors
   + .breadcrumb-item:hover::before {
     text-decoration: none;
-  }
-
-  &.active {
-
   }
 }

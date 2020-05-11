@@ -1,0 +1,49 @@
+.card-link {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  border: solid 3px #999;
+  color: #00285b;
+  text-decoration: none;
+  background-color: rgba($white, .8);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  transition: all linear .15s;
+
+  &:hover {
+    border-color: #3a56db;
+  }
+
+  &_bg {
+    display: block;
+    height: 115px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+  }
+
+  &_title {
+    display: block;
+    margin-bottom: 30px;
+    padding: 0 15px;
+    font-weight: 900;
+    @include fontSize(18px);
+  }
+
+  @include media-breakpoint-up(sm) {
+
+    &_bg {
+      height: 120px;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    &_bg {
+      height: 150px;
+    }
+    &_title {
+      height: 50px;
+      overflow: hidden;
+    }
+  }
+}

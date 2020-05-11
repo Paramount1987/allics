@@ -9,7 +9,12 @@
     "jquery": true
   },
   "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+},
   "rules": {
-    "no-console": 0
+    "no-console": 0,
+    "indent": ["error", 4]
   }
 }

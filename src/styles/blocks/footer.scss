@@ -1,0 +1,93 @@
+.footer {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+  &-col {
+    &__first {
+      margin-bottom: 30px;
+    }
+  }
+
+  &-logo {
+    display: flex;
+    align-items: center;
+    color: #101010;
+    text-decoration: none;
+
+    &_title {
+      font-family: 'Montserrat';
+      font-size: 33px;
+      font-weight: 700;
+    }
+    &_descr {
+      margin-left: 10px;
+      padding-left: 10px;
+      font-size: 12px;
+      line-height: 1.2;
+      border-left: 1px solid #101010;
+    }
+  }
+
+  &-phone,
+  &-mail {
+    color: #101010;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  @include media-breakpoint-up(sm) {
+    &-row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-col {
+      margin: 0;
+
+      &__second {
+        display: flex;
+        padding-top: 8px;
+      }
+    }
+  }
+}
+
+// social list links
+.social {
+  &-list {
+    display: flex;
+    margin: 0 0 30px -30px;
+    padding: 0;
+    list-style-type: none;
+
+    > li {
+      margin-left: 30px;
+    }
+  }
+
+  &-link {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #3a56db;
+  }
+
+  @include media-breakpoint-up(sm) {
+    &-list {
+      margin-left: -8px;
+
+      &__footer {
+        margin-right: 50px;
+      }
+
+      > li {
+        margin-left: 8px;
+      }
+    }
+  }
+}

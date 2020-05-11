@@ -1,0 +1,45 @@
+{% extends './inc/page.twig' %}
+
+{% block content %}
+	<div class="container pb-1">
+		{% include 'inc/main/intro.twig' %}
+
+    <div class="breadcrumb">
+      <a href="#" class="breadcrumb-item">Главная</a>
+      <a href="#" class="breadcrumb-item">Услуги</a>
+      <span class="breadcrumb-item">Диспетчеризация</span>
+    </div>
+
+    <div class="user-text">
+      <h1 class="h1">Сборка шкафов автоматизации</h1>
+    </div>
+
+    <div class="user-text user-text__border mb-5">
+      <p class="mb-0">
+        ООО "ОЛАЙСИС" разрабатывает и внедряет комплексные автоматизированные системы, позволяющие усовершенствовать производственный процесс.
+        Мы имеем более 10-летний опыт производства и поставки шкафов автоматики, электротехнического оборудования и компонентов. В каталоге нашей компании вы сможете выбрать
+        надежное оборудование для АСУ ТП от ведущих производителей.
+      </p>
+      <p>
+        ООО "ОЛАЙСИС" разрабатывает и внедряет комплексные автоматизированные системы, позволяющие усовершенствовать производственный процесс.
+        Мы имеем более 10-летний опыт производства и поставки шкафов автоматики, электротехнического оборудования и компонентов. В каталоге нашей компании вы сможете выбрать
+        надежное оборудование для АСУ ТП от ведущих производителей.
+      </p>
+      <div class="img-list">
+        <img src="images/claudio.jpg" alt="" class="img-sm">
+        <img src="images/claudio.jpg" alt="" class="img-sm">
+        <img src="images/claudio.jpg" alt="" class="img-sm">
+      </div>
+    </div>
+
+    {% include 'inc/main/slider-uslugi.twig' %}
+
+    <h2 class="uppcase">Облако тегов</h2>
+
+    <ul class="tags_list">
+      <li><a href="#" class="tags_link">Сборка шкафов управления</a></li>
+      <li><a href="#" class="tags_link">Программирование ЧПУ</a></li>
+      <li><a href="#" class="tags_link">Автоматизация кательных</a></li>
+    </ul>
+	</div>
+{% endblock %}
