@@ -11,9 +11,11 @@ require('./libs/index');
 window.jQuery = window.$;
 
 import SliderWorks from './components/slider-works';
+import Nav from './components/nav';
 
 //----------------------------------------------
 $(document).ready(() => {
+  Nav.init();
   new SliderWorks('.js-swiper-works');
 
   $('.js-popup-form').magnificPopup({

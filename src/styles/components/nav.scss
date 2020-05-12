@@ -8,6 +8,36 @@
     padding: 0;
     width: 100%;
     list-style-type: none;
+
+    > li {
+      position: relative;
+    }
+  }
+
+  &_sub-list {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 30px;
+    left: 0;
+    width: 215px;
+    margin: 0;
+    list-style: none;
+    padding: 28px;
+    background-color: $white;
+    border-top: 4px solid #3a56db;
+    box-shadow: 1.5px 2.6px 13px 0 rgba(0, 0, 0, 0.2);
+
+    &.active {
+      display: block;
+    }
+    > li {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &_link {
@@ -24,6 +54,30 @@
 
     &.active {
       border-bottom: 4px solid #3a56db;
+    }
+
+    &__icon {
+      position: relative;
+      padding-right: 15px;
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 5px;
+        width: 8px;
+        height: 8px;
+        background-color: #000;
+      }
+    }
+  }
+
+  &_sub-link {
+    color: #141414;
+    font-size: 18px;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 
