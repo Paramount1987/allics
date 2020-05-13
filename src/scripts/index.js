@@ -10,11 +10,15 @@ require('./libs/index');
 
 window.jQuery = window.$;
 
+import { isMobileDevice } from './utils';
 import SliderWorks from './components/slider-works';
 import Nav from './components/nav';
 
+const htmlClass = isMobileDevice() ? 'mobile' : '';
 //----------------------------------------------
 $(document).ready(() => {
+  $('html').addClass(htmlClass);
+
   Nav.init();
   new SliderWorks('.js-swiper-works');
 
@@ -23,9 +27,4 @@ $(document).ready(() => {
     preloader: false,
     focus: '#name',
   });
-
-  // $(document).on('click', '.popup-modal-dismiss', (e) => {
-  //   e.preventDefault();
-  //   $.magnificPopup.close();
-  // });
 });

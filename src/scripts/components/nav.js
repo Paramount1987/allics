@@ -20,10 +20,19 @@ const Nav = {
                 const id = $(this).attr('id');
 
                 if (currentId !== `#${id}`) {
-                    $(this).fadeOut();
+                    if (window.matchMedia('(min-width: 1280px)').matches) {
+                        $(this).fadeOut();
+                    } else {
+                        $(this).slideUp();
+                    }
                 }
             });
-            $target.fadeToggle();
+
+            if (window.matchMedia('(min-width: 1280px)').matches) {
+                $target.fadeToggle();
+            } else {
+                $target.slideToggle();
+            }
         });
     },
 
@@ -32,7 +41,11 @@ const Nav = {
             const $target = $(e.target);
 
             if (!$target.hasClass('js-nav-link')) {
-                Nav.$subList.fadeOut();
+                if (window.matchMedia('(min-width: 1280px)').matches) {
+                    Nav.$subList.fadeOut();
+                } else {
+                    Nav.$subList.slideUp();
+                }
             }
         });
     },
