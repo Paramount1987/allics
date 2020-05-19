@@ -1,5 +1,5 @@
 .main-intro {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 
   &_col {
     display: none;
@@ -25,6 +25,10 @@
     font-weight: 700;
     text-transform: uppercase;
     line-height: 1.2;
+
+    @include media-breakpoint-down(xs) {
+      font-size: 65px;
+    }
   }
 
   &_descr {
